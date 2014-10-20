@@ -42,12 +42,12 @@ O('menu').onclick=function(){
 //=========== get Data ======================
 function getCsv(filename){
   var xhrGetCsv = new XMLHttpRequest();
-  var url = 'https://dl.dropboxusercontent.com/u/21142484/.Mobile.Apps/SlidingDoor/';
+  var url = '';//'https://dl.dropboxusercontent.com/u/21142484/.Mobile.Apps/SlidingDoor/';
   xhrGetCsv.open('GET', url+'docs/'+filename, true);
   xhrGetCsv.send();
   //------------------------------------
   xhrGetCsv.onload = function(){
-    if(this.status === 200){
+    if(this.status === 200 || this.status === 0 ){
       csvData = this.response;
       csvSearch(csvData, O(viewer));        
     }
