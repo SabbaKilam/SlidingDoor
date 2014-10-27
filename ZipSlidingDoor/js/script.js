@@ -42,7 +42,7 @@ O('menu').onclick=function(){
 //=========== get Data ======================
 function getCsv(filename){
   var xhrGetCsv = new XMLHttpRequest();
-  var url = 'https://dl.dropboxusercontent.com/u/21142484/.Mobile.Apps/SlidingDoor/';
+  var url = '';
   xhrGetCsv.open('GET', url + 'docs/' + filename, true);
   xhrGetCsv.send();
   //------------------------------------
